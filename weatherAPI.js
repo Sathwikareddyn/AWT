@@ -2,7 +2,7 @@ function getWeather(){
     var request=new XMLHttpRequest();
     var city=document.getElementById("city").value;
     var apiKey="b3fb0e85a655087b7836f58113eac8c8";
-    var url=`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    var url=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
     request.open('GET',url,true);
     request.onload=function(){
         var result=JSON.parse(this.response);
